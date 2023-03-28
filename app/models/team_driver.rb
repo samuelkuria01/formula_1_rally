@@ -1,0 +1,2 @@
+class TeamDriver < ApplicationRecord
+end
