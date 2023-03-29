@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   resources :race_particpants
-
-  resources :races do
-    resources :particpants
+  resources :races, only: [:index, :show, :create] do
+    resources :particpants, only: [:index, :show]
 
   end
   resources :particpants
