@@ -175,3 +175,94 @@ drivers = [
 drivers.each do |driver|
     Driver.create(driver)
 end
+
+
+races = [
+    {
+        "name":"Bahrain circuit",
+        "location":"Sakhir",
+        "date":"03 - 05 Mar 2023"
+    },
+    {
+        "name":"Jeddah Corniche Circuit",
+        "location":"Saudi Arabia",
+        "date":"17 - 19 Mar 2023"
+    },
+    {
+        "name":"Albert Park circuit",
+        "location":"Australia",
+        "date":"27 - 29 Feb 2023"
+    },
+]
+
+races.each do |race|
+    Race.create(race)
+end
+
+
+particpants = [
+    {
+        "name":"Max Verstappen",
+        "car":"Red Bull",
+        "position":1,
+        "laps":57
+    },
+    {
+        "name":"Sergio Perrez",
+        "car":"Red Bull",
+        "position":2,
+        "laps":57,
+    },
+    {
+        "name":"Goerge Russel",
+        "car":"Mercedes",
+        "position":3,
+        "laps":57,
+    },
+    {
+        "name":"Fernando Alonso",
+        "car":"Astorn Martin",
+        "position":4,
+        "laps":57,
+    },
+    {
+        "name":"Lewis Hamilton",
+        "car":"Mercedes",
+        "position":5,
+        "laps":57,
+    },
+    {
+        "name":"Charles Leclerc",
+        "car":"Ferrari",
+        "position":6,
+        "laps":57,
+    },
+    {
+        "name":"Valteri Bottas",
+        "car":"Alfa Romeo",
+        "position":7,
+        "laps":57,
+    },
+    {
+        "name":"Oscar Piastri",
+        "car":"Mclaren",
+        "position":8,
+        "laps":57,
+    },
+    {
+        "name":"Pierra Gasly",
+        "car":"Alpine Renault",
+        "position":9,
+        "laps":57,
+    },
+    {
+        "name":"Nyke De Vries",
+        "car":"Alpha Tauri",
+        "position":10,
+        "laps":57,
+    },
+]
+
+particpants.each do |particpant|
+    Particpant.create(particpant)
+end

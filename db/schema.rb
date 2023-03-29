@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_28_200600) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_29_051256) do
   create_table "drivers", force: :cascade do |t|
     t.string "name"
     t.string "country"
@@ -19,6 +19,30 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_200600) do
     t.integer "world_championships"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "particpants", force: :cascade do |t|
+    t.string "name"
+    t.string "car"
+    t.integer "position"
+    t.integer "laps"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "race_particpants", force: :cascade do |t|
+    t.integer "race_id"
+    t.integer "particpant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "races", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "location"
+    t.string "date"
   end
 
   create_table "team_drivers", force: :cascade do |t|
